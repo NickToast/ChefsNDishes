@@ -25,10 +25,10 @@
                     <option value="@c.ChefId">@c.FirstName @c.LastName</option>
                 }
             </select>
+            <span asp-validation-for="ChefId" class="text-danger fw-bold"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Tastiness" class="my-1"></label>
-            <span asp-validation-for="NumCalories" class="text-danger fw-bold"></span>
             <select asp-for="Tastiness">
                 <option value="" selected disabled>~ Select Tastiness ~</option>
                 <option value="1">1</option>

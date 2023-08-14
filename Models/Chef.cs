@@ -1,5 +1,6 @@
 #pragma warning disable CS8618
 
+using System.ComponentModel;
 //Allows you use a feature of C# to do validations
 using System.ComponentModel.DataAnnotations;
 // Add this using statement to access NotMapped
@@ -12,15 +13,15 @@ public class Chef
     [Key] //UNIQUE KEY
     public int ChefId { get; set; }
 
-    [Required(ErrorMessage = "First name is required to add Chef")]
+    [Required(ErrorMessage = "First name is required to add a chef")]
     [Display(Name = "First Name")]
     public string FirstName { get; set;}
 
-    [Required(ErrorMessage = "Last name is required to add Chef")]
+    [Required(ErrorMessage = "Last name is required to add a chef")]
     [Display(Name = "Last Name")]
     public string LastName { get; set;}
 
-    [Required(ErrorMessage = "Please enter a valid Date of Birth")]
+    [Required]
     [Display(Name = "Date of Birth")]
     public DateTime DateOfBirth { get; set; }
 

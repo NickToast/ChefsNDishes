@@ -22,19 +22,19 @@ public class Dish
     // [Display(Name = "Chef's Name")]
     // public string ChefName { get; set;}
 
-    [Required(ErrorMessage = "Calories are required to add a dish")]
-    [Range(1, Int32.MaxValue)]
+    [Required]
+    [Range(1, Int32.MaxValue, ErrorMessage = "Calories must be greater than 0")]
     [Display(Name = "Calories")]
     public int NumCalories { get; set; }
 
-    [Required(ErrorMessage = "Tastiness is required to add a dish")]
+    [Required]
     [Range(1,6, ErrorMessage = "Tastiness must be between 1 and 5")]
     public int Tastiness { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-    [Required]
+    [Required(ErrorMessage = "Please select a chef for the dish")]
     [Display(Name = "Chef's Name")]
     public int ChefId { get; set; }
 

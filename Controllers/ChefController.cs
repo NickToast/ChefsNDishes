@@ -46,7 +46,7 @@ public class ChefController : Controller
     {
         if (!ModelState.IsValid)
         {
-            return View ("New");
+            return View("AddChef");
         }
         db.Chefs.Add(newChef);
         db.SaveChanges();

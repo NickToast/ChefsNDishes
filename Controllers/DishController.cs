@@ -40,7 +40,7 @@ public class DishController : Controller
         if (!ModelState.IsValid)
         {
             ViewBag.allChefs = db.Chefs.ToList();
-            return View("Index");
+            return View("AddDish");
         }
         db.Dishes.Add(newDish);
         db.SaveChanges();
